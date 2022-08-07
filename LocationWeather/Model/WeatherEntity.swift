@@ -7,17 +7,37 @@
 
 import Foundation
 
+// MARK: - WeatherEntity
 struct WeatherEntity: Codable {
-    let numOfRows: Int?
-    let pageNo: Int?
-    let totalCount: Int?
-    let resultCode: Int?
-    let resultMsg: String?
-    let dataType: String?
-    let baseDate: Int?
-    let baseTime: Int?
-    let nx: Int?
-    let ny: Int?
-    let category: String?
-    let obsrValue: Int?
+    let response: Response
+}
+
+// MARK: - Response
+struct Response: Codable {
+    let header: Header
+    let body: Body
+}
+
+// MARK: - Body
+struct Body: Codable {
+    let dataType: String
+    let items: Items
+    let pageNo, numOfRows, totalCount: Int
+}
+
+// MARK: - Items
+struct Items: Codable {
+    let item: [Item]
+}
+
+// MARK: - Item
+struct Item: Codable {
+    let baseDate, baseTime, category: String
+    let nx, ny: Int
+    let obsrValue: String
+}
+
+// MARK: - Header
+struct Header: Codable {
+    let resultCode, resultMsg: String
 }

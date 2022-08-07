@@ -21,17 +21,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jKg-Hx-gnY">
-                                <rect key="frame" x="32" y="100" width="327" height="108"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jKg-Hx-gnY">
+                                <rect key="frame" x="15" y="115" width="360" height="282"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="현재 내 위치" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J9s-AD-jbo">
-                                        <rect key="frame" x="14" y="8" width="107" height="27"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="SuseongDotum-Regular" family="Suseong Dotum" pointSize="20"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="위치위치위치" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5L8-ZT-8H0">
                                         <rect key="frame" x="14" y="52" width="103" height="24"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -40,82 +32,171 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" red="0.76003870959999997" green="0.67293762109999999" blue="0.87812966110000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UMV-Ct-5Xi">
-                                <rect key="frame" x="32" y="244" width="327" height="295"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UMV-Ct-5Xi">
+                                <rect key="frame" x="15" y="405" width="360" height="136"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="발표일자 :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AsI-OE-pIR">
-                                        <rect key="frame" x="17" y="25" width="81" height="24"/>
+                                        <rect key="frame" x="17" y="15" width="67" height="20"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="SuseongDotum-Regular" family="Suseong Dotum" pointSize="18"/>
+                                        <fontDescription key="fontDescription" name="SuseongDotum-Regular" family="Suseong Dotum" pointSize="15"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="발표시각 :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ePV-5v-ONC">
-                                        <rect key="frame" x="17" y="67" width="81" height="24"/>
+                                        <rect key="frame" x="17" y="43" width="67" height="20"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="SuseongDotum-Regular" family="Suseong Dotum" pointSize="18"/>
+                                        <fontDescription key="fontDescription" name="SuseongDotum-Regular" family="Suseong Dotum" pointSize="15"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="예보지점 x 좌표 :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TbN-tr-ArJ">
-                                        <rect key="frame" x="17" y="110" width="137" height="24"/>
+                                        <rect key="frame" x="17" y="71" width="114" height="20"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="SuseongDotum-Regular" family="Suseong Dotum" pointSize="18"/>
+                                        <fontDescription key="fontDescription" name="SuseongDotum-Regular" family="Suseong Dotum" pointSize="15"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="예보지점 y 좌표 :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V9h-3j-ujg">
-                                        <rect key="frame" x="17" y="148" width="137" height="24"/>
+                                        <rect key="frame" x="17" y="99" width="114" height="20"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="SuseongDotum-Regular" family="Suseong Dotum" pointSize="18"/>
+                                        <fontDescription key="fontDescription" name="SuseongDotum-Regular" family="Suseong Dotum" pointSize="15"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1999.04.06" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qkH-6q-y7i">
-                                        <rect key="frame" x="118" y="25" width="110" height="24"/>
+                                        <rect key="frame" x="241" y="15" width="92" height="20"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="SuseongDotum-Regular" family="Suseong Dotum" pointSize="18"/>
+                                        <fontDescription key="fontDescription" name="SuseongDotum-Regular" family="Suseong Dotum" pointSize="15"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1999.04.06" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fKZ-gv-gr1">
-                                        <rect key="frame" x="118" y="67" width="110" height="24"/>
+                                        <rect key="frame" x="245" y="43" width="92" height="20"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="SuseongDotum-Regular" family="Suseong Dotum" pointSize="18"/>
+                                        <fontDescription key="fontDescription" name="SuseongDotum-Regular" family="Suseong Dotum" pointSize="15"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="8282" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J7n-t2-x6m">
-                                        <rect key="frame" x="162" y="110" width="47" height="24"/>
+                                        <rect key="frame" x="298" y="71" width="39" height="20"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="SuseongDotum-Regular" family="Suseong Dotum" pointSize="18"/>
+                                        <fontDescription key="fontDescription" name="SuseongDotum-Regular" family="Suseong Dotum" pointSize="15"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="8282" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A39-BU-dMr">
-                                        <rect key="frame" x="162" y="148" width="47" height="24"/>
+                                        <rect key="frame" x="298" y="99" width="39" height="20"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="SuseongDotum-Regular" family="Suseong Dotum" pointSize="18"/>
+                                        <fontDescription key="fontDescription" name="SuseongDotum-Regular" family="Suseong Dotum" pointSize="15"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="l5s-pt-N90">
+                                <rect key="frame" x="5" y="611" width="380" height="213"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="213" id="IAh-YO-gQL"/>
+                                </constraints>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="OtherLocationCell" rowHeight="60" id="hWa-CN-gfZ" customClass="OtherLocationTableViewCell" customModule="LocationWeather" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.666666030883789" width="380" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hWa-CN-gfZ" id="fmD-iI-VXr">
+                                            <rect key="frame" x="0.0" y="0.0" width="380" height="60"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="인천" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Coy-il-fTE">
+                                                    <rect key="frame" x="30" y="20" width="28.666666666666671" height="20"/>
+                                                    <fontDescription key="fontDescription" name="SuseongDotum-Regular" family="Suseong Dotum" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_arrow_right" translatesAutoresizingMaskIntoConstraints="NO" id="hzO-wd-dRq">
+                                                    <rect key="frame" x="335" y="15" width="30" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="hzO-wd-dRq" secondAttribute="height" multiplier="1:1" id="a6n-O2-oxM"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uXL-Zh-vpd">
+                                                    <rect key="frame" x="20" y="11" width="340" height="38"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain"/>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="hzO-wd-dRq" secondAttribute="trailing" constant="15" id="FTb-Wy-0s3"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="uXL-Zh-vpd" secondAttribute="trailing" id="SOT-jG-mKL"/>
+                                                <constraint firstItem="uXL-Zh-vpd" firstAttribute="leading" secondItem="fmD-iI-VXr" secondAttribute="leadingMargin" id="a61-cy-RV6"/>
+                                                <constraint firstItem="Coy-il-fTE" firstAttribute="leading" secondItem="fmD-iI-VXr" secondAttribute="leadingMargin" constant="10" id="ddR-xr-Ls7"/>
+                                                <constraint firstItem="uXL-Zh-vpd" firstAttribute="top" secondItem="fmD-iI-VXr" secondAttribute="topMargin" id="mOx-UR-faX"/>
+                                                <constraint firstItem="Coy-il-fTE" firstAttribute="centerY" secondItem="fmD-iI-VXr" secondAttribute="centerY" id="rFl-bJ-wxp"/>
+                                                <constraint firstItem="hzO-wd-dRq" firstAttribute="top" secondItem="fmD-iI-VXr" secondAttribute="top" constant="15" id="rQk-Gf-Wcs"/>
+                                                <constraint firstAttribute="bottom" secondItem="hzO-wd-dRq" secondAttribute="bottom" constant="15" id="yVP-f6-b1y"/>
+                                                <constraint firstItem="uXL-Zh-vpd" firstAttribute="bottom" secondItem="fmD-iI-VXr" secondAttribute="bottomMargin" id="zc3-AX-4zB"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="detailBtn" destination="uXL-Zh-vpd" id="HC4-LD-fwA"/>
+                                            <outlet property="locationName" destination="Coy-il-fTE" id="VZ0-dF-LVr"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="다른 지역 날씨 정보" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JW5-9R-GKc">
+                                <rect key="frame" x="30" y="569" width="345" height="27"/>
+                                <fontDescription key="fontDescription" name="SuseongDotum-Regular" family="Suseong Dotum" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="내 위치 날씨 정보" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kme-SJ-HKi">
+                                <rect key="frame" x="30" y="73" width="345" height="27"/>
+                                <fontDescription key="fontDescription" name="SuseongDotum-Regular" family="Suseong Dotum" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="UMV-Ct-5Xi" secondAttribute="trailing" constant="15" id="0Ip-yb-PmL"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jKg-Hx-gnY" secondAttribute="trailing" constant="15" id="AI7-gv-QMm"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kme-SJ-HKi" secondAttribute="trailing" constant="15" id="Emb-8A-q2t"/>
+                            <constraint firstItem="UMV-Ct-5Xi" firstAttribute="top" secondItem="jKg-Hx-gnY" secondAttribute="bottom" constant="8" symbolic="YES" id="Glm-Z5-gBE"/>
+                            <constraint firstItem="kme-SJ-HKi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="HEa-a7-nYn"/>
+                            <constraint firstItem="l5s-pt-N90" firstAttribute="top" secondItem="JW5-9R-GKc" secondAttribute="bottom" constant="15" id="Ic9-7W-ub5"/>
+                            <constraint firstItem="UMV-Ct-5Xi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="Pfi-o1-cgp"/>
+                            <constraint firstItem="kme-SJ-HKi" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="29" id="PkJ-cG-Cut"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="JW5-9R-GKc" secondAttribute="trailing" constant="15" id="act-KU-b4n"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="l5s-pt-N90" secondAttribute="trailing" constant="5" id="dNQ-iG-m3l"/>
+                            <constraint firstItem="JW5-9R-GKc" firstAttribute="top" secondItem="UMV-Ct-5Xi" secondAttribute="bottom" constant="28" id="gi3-2t-IBm"/>
+                            <constraint firstItem="l5s-pt-N90" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="5" id="jRx-ti-pJs"/>
+                            <constraint firstItem="jKg-Hx-gnY" firstAttribute="top" secondItem="kme-SJ-HKi" secondAttribute="bottom" constant="15" id="jSK-3Y-VCz"/>
+                            <constraint firstItem="JW5-9R-GKc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="ofi-qt-Yhe"/>
+                            <constraint firstItem="jKg-Hx-gnY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="oju-c2-wfA"/>
+                            <constraint firstAttribute="bottom" secondItem="l5s-pt-N90" secondAttribute="bottom" constant="20" id="vwA-Mz-NLg"/>
+                            <constraint firstItem="UMV-Ct-5Xi" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="405" id="zv1-PY-V5h"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="announcementDay" destination="qkH-6q-y7i" id="R5S-oO-z2m"/>
+                        <outlet property="announcementTime" destination="ePV-5v-ONC" id="mSJ-hv-0PP"/>
+                        <outlet property="forecastX" destination="TbN-tr-ArJ" id="DWf-2a-hck"/>
+                        <outlet property="forecastY" destination="V9h-3j-ujg" id="mFz-mO-WTb"/>
+                        <outlet property="otherLocationTableView" destination="l5s-pt-N90" id="pbg-oI-qsp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.92307692307691" y="130.09478672985782"/>
+            <point key="canvasLocation" x="16.923076923076923" y="128.67298578199052"/>
         </scene>
     </scenes>
     <resources>
+        <image name="ic_arrow_right" width="20" height="20"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
