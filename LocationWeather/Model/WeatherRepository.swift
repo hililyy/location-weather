@@ -8,11 +8,13 @@
 import Foundation
 import RxSwift
 import Combine
+import RxCocoa
 
 let disposeBag = DisposeBag()
 
 class WeatherRepository {
-    let url = "\(getUrl())"
+    let urlString = "\(getUrl())"
+    
     
     
 }
