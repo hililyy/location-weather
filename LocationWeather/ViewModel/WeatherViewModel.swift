@@ -13,7 +13,10 @@ class WeatherViewModel {
     static let weatherViewModel = WeatherViewModel()
 //    private var parameters: Parameters = [:]
 //
+    
     var weatherData: WeatherEntity?
     var nowForecastX: Int = 0
     var nowForecastY: Int = 0
 }
+
+

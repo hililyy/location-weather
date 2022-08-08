@@ -109,5 +109,29 @@ extension WeatherVC: UITableViewDelegate, UITableViewDataSource {
         }
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        if let vc = self.storyboard?.instantiateViewController(withIdentifier: "OtherLocationVC") as? OtherLocationVC {
+            switch indexPath.row {
+                case 0:
+                    vc.selectLocation = "인천광역시"
+                case 1:
+                    vc.selectLocation = "대전광역시"
+                case 2:
+                    vc.selectLocation = "대구광역시"
+                case 3:
+                    vc.selectLocation = "부산광역시"
+                case 4:
+                    vc.selectLocation = "울산광역시"
+                default: break
+            }
+            vc.modalTransitionStyle = .crossDissolve
+            vc.modalPresentationStyle = .popover
+            
+            self.present(vc, animated: true, completion: nil)
+        }
+    }
+
 }
 

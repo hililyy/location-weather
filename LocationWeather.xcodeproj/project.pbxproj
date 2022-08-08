@@ -15,6 +15,11 @@
 		2A0D878528A1667C00576E56 /* KOTRA_GOTHIC.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2A0D878428A1667700576E56 /* KOTRA_GOTHIC.ttf */; };
 		2A0D878728A1754100576E56 /* DetailWeatherTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0D878628A1754100576E56 /* DetailWeatherTableViewCell.swift */; };
 		2A0D878928A175D300576E56 /* DetailWeatherVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0D878828A175D300576E56 /* DetailWeatherVC.swift */; };
+		2A0D878D28A188B500576E56 /* weather.csv in Resources */ = {isa = PBXBuildFile; fileRef = 2A0D878C28A188B500576E56 /* weather.csv */; };
+		2A0D879128A18A5B00576E56 /* CoreXLSX in Frameworks */ = {isa = PBXBuildFile; productRef = 2A0D879028A18A5B00576E56 /* CoreXLSX */; };
+		2A0D879328A18AAB00576E56 /* OtherLocationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0D879228A18AAB00576E56 /* OtherLocationVC.swift */; };
+		2A0D879828A1A71E00576E56 /* OtherLocationDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0D879728A1A71E00576E56 /* OtherLocationDetailTableViewCell.swift */; };
+		2A0D879B28A1AABD00576E56 /* OtherLocationSelectedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0D879A28A1AABD00576E56 /* OtherLocationSelectedVC.swift */; };
 		2AC6EB06289BB82F0062C8F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC6EB05289BB82F0062C8F0 /* AppDelegate.swift */; };
 		2AC6EB08289BB82F0062C8F0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC6EB07289BB82F0062C8F0 /* SceneDelegate.swift */; };
 		2AC6EB0D289BB82F0062C8F0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AC6EB0B289BB82F0062C8F0 /* Main.storyboard */; };
@@ -40,6 +45,11 @@
 		2A0D878428A1667700576E56 /* KOTRA_GOTHIC.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = KOTRA_GOTHIC.ttf; sourceTree = "<group>"; };
 		2A0D878628A1754100576E56 /* DetailWeatherTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailWeatherTableViewCell.swift; sourceTree = "<group>"; };
 		2A0D878828A175D300576E56 /* DetailWeatherVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailWeatherVC.swift; sourceTree = "<group>"; };
+		2A0D878C28A188B500576E56 /* weather.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = weather.csv; sourceTree = "<group>"; };
+		2A0D878E28A1894400576E56 /* weather.xlsx */ = {isa = PBXFileReference; lastKnownFileType = file; path = weather.xlsx; sourceTree = "<group>"; };
+		2A0D879228A18AAB00576E56 /* OtherLocationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherLocationVC.swift; sourceTree = "<group>"; };
+		2A0D879728A1A71E00576E56 /* OtherLocationDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherLocationDetailTableViewCell.swift; sourceTree = "<group>"; };
+		2A0D879A28A1AABD00576E56 /* OtherLocationSelectedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherLocationSelectedVC.swift; sourceTree = "<group>"; };
 		2AC6EB02289BB82F0062C8F0 /* LocationWeather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LocationWeather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AC6EB05289BB82F0062C8F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2AC6EB07289BB82F0062C8F0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -68,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A0D879128A18A5B00576E56 /* CoreXLSX in Frameworks */,
 				47606A1ECA9C872E00149C53 /* Pods_LocationWeather.framework in Frameworks */,
 				2A0D877A28A13DEB00576E56 /* Lottie in Frameworks */,
 			);
@@ -91,6 +102,44 @@
 				2A0D877F28A1526A00576E56 /* weather.json */,
 			);
 			path = Lottie;
+			sourceTree = "<group>";
+		};
+		2A0D878B28A1882300576E56 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				2A0D878C28A188B500576E56 /* weather.csv */,
+				2A0D878E28A1894400576E56 /* weather.xlsx */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		2A0D879428A1A6C200576E56 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				2AC6EB21289BBFD90062C8F0 /* WeatherVC.swift */,
+				2AC6EB31289F7D1F0062C8F0 /* OtherLocationTableViewCell.swift */,
+				2AC6EB33289F80E40062C8F0 /* LocationList.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		2A0D879528A1A6CF00576E56 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				2A0D878828A175D300576E56 /* DetailWeatherVC.swift */,
+				2A0D878628A1754100576E56 /* DetailWeatherTableViewCell.swift */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		2A0D879628A1A6D600576E56 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				2A0D879228A18AAB00576E56 /* OtherLocationVC.swift */,
+				2A0D879728A1A71E00576E56 /* OtherLocationDetailTableViewCell.swift */,
+				2A0D879A28A1AABD00576E56 /* OtherLocationSelectedVC.swift */,
+			);
+			path = Other;
 			sourceTree = "<group>";
 		};
 		2AC6EAF9289BB82F0062C8F0 = {
@@ -133,11 +182,9 @@
 		2AC6EB19289BBD080062C8F0 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				2AC6EB21289BBFD90062C8F0 /* WeatherVC.swift */,
-				2AC6EB31289F7D1F0062C8F0 /* OtherLocationTableViewCell.swift */,
-				2AC6EB33289F80E40062C8F0 /* LocationList.swift */,
-				2A0D878628A1754100576E56 /* DetailWeatherTableViewCell.swift */,
-				2A0D878828A175D300576E56 /* DetailWeatherVC.swift */,
+				2A0D879428A1A6C200576E56 /* Main */,
+				2A0D879528A1A6CF00576E56 /* Detail */,
+				2A0D879628A1A6D600576E56 /* Other */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -164,6 +211,7 @@
 		2AC6EB1C289BBD200062C8F0 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				2A0D878B28A1882300576E56 /* Data */,
 				2AC6EB2D289E2EE20062C8F0 /* ApiUrlUtils.swift */,
 				2AC6EB2F289E31B00062C8F0 /* ErrorCase.swift */,
 			);
@@ -225,6 +273,7 @@
 			name = LocationWeather;
 			packageProductDependencies = (
 				2A0D877928A13DEB00576E56 /* Lottie */,
+				2A0D879028A18A5B00576E56 /* CoreXLSX */,
 			);
 			productName = LocationWeather;
 			productReference = 2AC6EB02289BB82F0062C8F0 /* LocationWeather.app */;
@@ -256,6 +305,7 @@
 			mainGroup = 2AC6EAF9289BB82F0062C8F0;
 			packageReferences = (
 				2A0D877828A13DEA00576E56 /* XCRemoteSwiftPackageReference "lottie-ios" */,
+				2A0D878F28A18A5B00576E56 /* XCRemoteSwiftPackageReference "CoreXLSX" */,
 			);
 			productRefGroup = 2AC6EB03289BB82F0062C8F0 /* Products */;
 			projectDirPath = "";
@@ -274,6 +324,7 @@
 				2A0D877E28A1522B00576E56 /* good.json in Resources */,
 				2AC6EB12289BB8340062C8F0 /* LaunchScreen.storyboard in Resources */,
 				2AC6EB0F289BB8340062C8F0 /* Assets.xcassets in Resources */,
+				2A0D878D28A188B500576E56 /* weather.csv in Resources */,
 				2A0D878328A1662000576E56 /* SuseongDotum.ttf in Resources */,
 				2A0D878028A1526A00576E56 /* weather.json in Resources */,
 				2A0D878528A1667C00576E56 /* KOTRA_GOTHIC.ttf in Resources */,
@@ -334,11 +385,14 @@
 				2AC6EB06289BB82F0062C8F0 /* AppDelegate.swift in Sources */,
 				2AC6EB2C289E2D700062C8F0 /* WeatherRepository.swift in Sources */,
 				2AC6EB28289BC0250062C8F0 /* WeatherFunction.swift in Sources */,
+				2A0D879328A18AAB00576E56 /* OtherLocationVC.swift in Sources */,
 				2A0D878728A1754100576E56 /* DetailWeatherTableViewCell.swift in Sources */,
 				2A0D878928A175D300576E56 /* DetailWeatherVC.swift in Sources */,
 				2AC6EB2A289BC0340062C8F0 /* WeatherEntity.swift in Sources */,
 				2AC6EB08289BB82F0062C8F0 /* SceneDelegate.swift in Sources */,
+				2A0D879B28A1AABD00576E56 /* OtherLocationSelectedVC.swift in Sources */,
 				2AC6EB34289F80E40062C8F0 /* LocationList.swift in Sources */,
+				2A0D879828A1A71E00576E56 /* OtherLocationDetailTableViewCell.swift in Sources */,
 				2AC6EB32289F7D1F0062C8F0 /* OtherLocationTableViewCell.swift in Sources */,
 				2A0D878228A1561600576E56 /* SplashVC.swift in Sources */,
 				2AC6EB2E289E2EE20062C8F0 /* ApiUrlUtils.swift in Sources */,
@@ -574,6 +628,14 @@
 				minimumVersion = 3.0.0;
 			};
 		};
+		2A0D878F28A18A5B00576E56 /* XCRemoteSwiftPackageReference "CoreXLSX" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/CoreOffice/CoreXLSX.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.9.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -581,6 +643,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 2A0D877828A13DEA00576E56 /* XCRemoteSwiftPackageReference "lottie-ios" */;
 			productName = Lottie;
+		};
+		2A0D879028A18A5B00576E56 /* CoreXLSX */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2A0D878F28A18A5B00576E56 /* XCRemoteSwiftPackageReference "CoreXLSX" */;
+			productName = CoreXLSX;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
