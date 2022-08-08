@@ -10,7 +10,7 @@ import RxSwift
 import RxCocoa
 import Alamofire
 import RxAlamofire
-import CoreLocation
+
 
 class WeatherVC: UIViewController {
     
@@ -20,24 +20,48 @@ class WeatherVC: UIViewController {
     @IBOutlet weak var forecastY: UILabel!
     @IBOutlet weak var otherLocationTableView: UITableView!
     let disposeBag = DisposeBag()
+    let model = WeatherViewModel.weatherViewModel
+    
     let otherLocationName: [LocationList] = [.incheon, .daejeon, .daegu, .busan, .ulsan]
-    private let parameters: Parameters = [
-        "serviceKey": "mJz7Lb%2B%2F20Uk8ve5Qx6GMo84GUbN1K%2BqFgbmdO17clsaiJaf3X6d%2FsNBJr5%2Bkvb6V5Wk5M7PqeXwzjMldfipjQ%3D%3D",
-        "numOfRows": 10,
-        "pageNo": 1,
-        "base_date": 20220807,
-        "base_time": 0600,
-        "nx": 55,
-        "ny": 127,
-        "dataType": "JSON"
-    ]
+    
+    private var parameters: Parameters = [:]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        almotmp().subscribe(
+        settingParameter()
+        requestWeatherData()
+
+        otherLocationTableView.delegate = self
+        otherLocationTableView.dataSource = self
+    }
+    @IBAction func goDetail(_ sender: Any) {
+        if let vc = self.storyboard?.instantiateViewController(withIdentifier: "DetailVC") as? DetailWeatherVC {
+            vc.modalTransitionStyle = .coverVertical
+            vc.modalPresentationStyle = .popover
+            
+            self.present(vc, animated: true, completion: nil)
+        }
+    }
+    func settingParameter() {
+        parameters = [
+            "serviceKey": "mJz7Lb%2B%2F20Uk8ve5Qx6GMo84GUbN1K%2BqFgbmdO17clsaiJaf3X6d%2FsNBJr5%2Bkvb6V5Wk5M7PqeXwzjMldfipjQ%3D%3D",
+            "numOfRows": 10,
+            "pageNo": 1,
+            "base_date": 20220807,
+            "base_time": 0600,
+            "nx": WeatherViewModel.weatherViewModel.nowForecastX,
+            "ny": WeatherViewModel.weatherViewModel.nowForecastY,
+            "dataType": "JSON"
+        ]
+    }
+    func requestWeatherData() {
+        apiRequest().subscribe(
             onNext: { [weak self] response in
+                self?.model.weatherData = response
                 self?.announcementDay.text = response.response.body.items.item[0].baseDate
                 self?.announcementTime.text = response.response.body.items.item[0].baseTime
+                self?.forecastX.text = String(response.response.body.items.item[0].nx)
+                self?.forecastY.text = String(response.response.body.items.item[0].ny)
                 print("next")
                 
             }, onError: { [weak self] error in
@@ -46,12 +70,9 @@ class WeatherVC: UIViewController {
                 print("completed")
             }
         ).disposed(by: disposeBag)
-        
-        otherLocationTableView.delegate = self
-        otherLocationTableView.dataSource = self
     }
     
-    func almotmp() -> Observable<WeatherEntity> {
+    func apiRequest() -> Observable<WeatherEntity> {
         let urlString = "\(getUrl())"
         return requestJSON(.get, urlString)
                 .map { $1 }

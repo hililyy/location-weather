@@ -41,8 +41,3 @@ struct Item: Codable {
 struct Header: Codable {
     let resultCode, resultMsg: String
 }
-
-struct ResponseDataEntity: Codable {
-    let baseDate, baseTime: String
-    let nx, ny: Int
-}

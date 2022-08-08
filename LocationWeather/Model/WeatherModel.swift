@@ -9,5 +9,6 @@ import Foundation
 import RxSwift
 
 class WeatherModel {
+    static let weatherModel = WeatherModel()
     
 }

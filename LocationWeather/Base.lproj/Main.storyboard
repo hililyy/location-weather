@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="AU0-rG-49X">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -8,26 +8,92 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="SuseongDotum.ttf">
-            <string>SuseongDotum-Regular</string>
+        <array key="KOTRA_GOTHIC.ttf">
+            <string>KOTRA_GOTHIC</string>
         </array>
     </customFonts>
     <scenes>
+        <!--SplashVC-->
+        <scene sceneID="YKD-7x-jvc">
+            <objects>
+                <viewController id="AU0-rG-49X" customClass="SplashVC" customModule="LocationWeather" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UM5-Br-LrM">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z1X-lh-cVw">
+                                <rect key="frame" x="16" y="44" width="358" height="347.66666666666669"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5To-3H-v3C">
+                                <rect key="frame" x="0.0" y="544" width="390" height="300"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="0xf-Jt-au5"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mqO-xc-WyF">
+                                <rect key="frame" x="145" y="494.66666666666669" width="100" height="39.333333333333314"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="시작하기"/>
+                                <buttonConfiguration key="configuration" style="plain" title="시작하기">
+                                    <fontDescription key="titleFontDescription" name="KOTRA_GOTHIC" family="KOTRA_GOTHIC" pointSize="20"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="start:" destination="AU0-rG-49X" eventType="touchUpInside" id="f5W-6X-PT9"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location Weather" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dbt-UW-9UZ">
+                                <rect key="frame" x="16" y="391.66666666666669" width="358" height="32"/>
+                                <fontDescription key="fontDescription" name="KOTRA_GOTHIC" family="KOTRA_GOTHIC" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="i9U-ZR-UHl"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="5To-3H-v3C" firstAttribute="top" secondItem="mqO-xc-WyF" secondAttribute="bottom" constant="10" id="Avs-xD-6eG"/>
+                            <constraint firstItem="mqO-xc-WyF" firstAttribute="top" secondItem="dbt-UW-9UZ" secondAttribute="bottom" constant="71" id="GF4-uG-NC4"/>
+                            <constraint firstItem="mqO-xc-WyF" firstAttribute="centerX" secondItem="UM5-Br-LrM" secondAttribute="centerX" id="JsV-zh-SyP"/>
+                            <constraint firstItem="i9U-ZR-UHl" firstAttribute="trailing" secondItem="5To-3H-v3C" secondAttribute="trailing" id="K8x-My-sQw"/>
+                            <constraint firstAttribute="bottom" secondItem="5To-3H-v3C" secondAttribute="bottom" id="NBZ-o8-tHk"/>
+                            <constraint firstItem="i9U-ZR-UHl" firstAttribute="trailing" secondItem="mqO-xc-WyF" secondAttribute="trailing" constant="145" id="TJF-l7-LCh"/>
+                            <constraint firstItem="z1X-lh-cVw" firstAttribute="leading" secondItem="UM5-Br-LrM" secondAttribute="leadingMargin" id="VxS-Km-bfc"/>
+                            <constraint firstItem="z1X-lh-cVw" firstAttribute="top" secondItem="i9U-ZR-UHl" secondAttribute="top" id="dhw-og-BuU"/>
+                            <constraint firstItem="i9U-ZR-UHl" firstAttribute="trailing" secondItem="dbt-UW-9UZ" secondAttribute="trailing" constant="16" id="dzs-LU-c5i"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="z1X-lh-cVw" secondAttribute="trailing" id="fc2-aP-c1u"/>
+                            <constraint firstItem="mqO-xc-WyF" firstAttribute="leading" secondItem="i9U-ZR-UHl" secondAttribute="leading" constant="145" id="gGg-di-9A2"/>
+                            <constraint firstItem="dbt-UW-9UZ" firstAttribute="leading" secondItem="i9U-ZR-UHl" secondAttribute="leading" constant="16" id="ipC-AP-JtK"/>
+                            <constraint firstItem="dbt-UW-9UZ" firstAttribute="top" secondItem="z1X-lh-cVw" secondAttribute="bottom" id="mvA-Tt-Vil"/>
+                            <constraint firstItem="5To-3H-v3C" firstAttribute="leading" secondItem="i9U-ZR-UHl" secondAttribute="leading" id="vKp-M0-6Al"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="goodView" destination="5To-3H-v3C" id="NC1-Ce-msa"/>
+                        <outlet property="weatherView" destination="z1X-lh-cVw" id="T3a-Zg-9Ap"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ltj-ji-J2M" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-709.23076923076917" y="128.67298578199052"/>
+        </scene>
         <!--WeatherVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="WeatherVC" customModule="LocationWeather" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WeatherVC" id="BYZ-38-t0r" customClass="WeatherVC" customModule="LocationWeather" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jKg-Hx-gnY">
-                                <rect key="frame" x="15" y="115" width="360" height="282"/>
+                                <rect key="frame" x="15" y="113.66666666666666" width="360" height="283.33333333333337"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="위치위치위치" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5L8-ZT-8H0">
-                                        <rect key="frame" x="14" y="52" width="103" height="24"/>
+                                        <rect key="frame" x="14" y="51.999999999999972" width="92" height="23"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="SuseongDotum-Regular" family="Suseong Dotum" pointSize="18"/>
+                                        <fontDescription key="fontDescription" name="KOTRA_GOTHIC" family="KOTRA_GOTHIC" pointSize="18"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -35,66 +101,90 @@
                                 <color key="backgroundColor" red="0.76003870959999997" green="0.67293762109999999" blue="0.87812966110000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UMV-Ct-5Xi">
-                                <rect key="frame" x="15" y="405" width="360" height="136"/>
+                                <rect key="frame" x="15" y="405" width="360" height="137.33333333333337"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="발표일자 :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AsI-OE-pIR">
-                                        <rect key="frame" x="17" y="15" width="67" height="20"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="SuseongDotum-Regular" family="Suseong Dotum" pointSize="15"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="발표일자 :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AsI-OE-pIR">
+                                        <rect key="frame" x="17" y="15" width="61" height="20"/>
+                                        <fontDescription key="fontDescription" name="KOTRA_GOTHIC" family="KOTRA_GOTHIC" pointSize="15"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="발표시각 :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ePV-5v-ONC">
-                                        <rect key="frame" x="17" y="43" width="67" height="20"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="SuseongDotum-Regular" family="Suseong Dotum" pointSize="15"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="발표시각 :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ePV-5v-ONC">
+                                        <rect key="frame" x="17" y="43" width="60" height="20"/>
+                                        <fontDescription key="fontDescription" name="KOTRA_GOTHIC" family="KOTRA_GOTHIC" pointSize="15"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="예보지점 x 좌표 :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TbN-tr-ArJ">
-                                        <rect key="frame" x="17" y="71" width="114" height="20"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="SuseongDotum-Regular" family="Suseong Dotum" pointSize="15"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="예보지점 x 좌표 :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TbN-tr-ArJ">
+                                        <rect key="frame" x="17" y="71" width="104" height="20"/>
+                                        <fontDescription key="fontDescription" name="KOTRA_GOTHIC" family="KOTRA_GOTHIC" pointSize="15"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="예보지점 y 좌표 :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V9h-3j-ujg">
-                                        <rect key="frame" x="17" y="99" width="114" height="20"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="SuseongDotum-Regular" family="Suseong Dotum" pointSize="15"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="예보지점 y 좌표 :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V9h-3j-ujg">
+                                        <rect key="frame" x="17" y="99" width="104" height="20"/>
+                                        <fontDescription key="fontDescription" name="KOTRA_GOTHIC" family="KOTRA_GOTHIC" pointSize="15"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1999.04.06" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fKZ-gv-gr1">
-                                        <rect key="frame" x="245" y="43" width="92" height="20"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="SuseongDotum-Regular" family="Suseong Dotum" pointSize="15"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="로딩중" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fKZ-gv-gr1">
+                                        <rect key="frame" x="187" y="43" width="150" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="150" id="sAH-l8-9zw"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="KOTRA_GOTHIC" family="KOTRA_GOTHIC" pointSize="15"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="8282" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J7n-t2-x6m">
-                                        <rect key="frame" x="298" y="71" width="39" height="20"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="SuseongDotum-Regular" family="Suseong Dotum" pointSize="15"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="로딩중" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J7n-t2-x6m">
+                                        <rect key="frame" x="187" y="71" width="150" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="150" id="hSr-Bh-2HE"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="KOTRA_GOTHIC" family="KOTRA_GOTHIC" pointSize="15"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="8282" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A39-BU-dMr">
-                                        <rect key="frame" x="298" y="99" width="39" height="20"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="SuseongDotum-Regular" family="Suseong Dotum" pointSize="15"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="로딩중" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A39-BU-dMr">
+                                        <rect key="frame" x="187" y="99" width="150" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="150" id="w2Y-gb-bJd"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="KOTRA_GOTHIC" family="KOTRA_GOTHIC" pointSize="15"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1999.04.06" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qkH-6q-y7i">
-                                        <rect key="frame" x="245" y="15" width="92" height="20"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="SuseongDotum-Regular" family="Suseong Dotum" pointSize="15"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="로딩중" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qkH-6q-y7i">
+                                        <rect key="frame" x="187" y="15" width="150" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="150" id="S3E-3l-9Zb"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="KOTRA_GOTHIC" family="KOTRA_GOTHIC" pointSize="15"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="J7n-t2-x6m" firstAttribute="leading" secondItem="TbN-tr-ArJ" secondAttribute="trailing" constant="66" id="2FK-mq-bZB"/>
+                                    <constraint firstAttribute="trailing" secondItem="fKZ-gv-gr1" secondAttribute="trailing" constant="23" id="53c-ZO-1p5"/>
+                                    <constraint firstItem="AsI-OE-pIR" firstAttribute="centerX" secondItem="ePV-5v-ONC" secondAttribute="centerX" id="5st-iZ-g8B"/>
+                                    <constraint firstItem="AsI-OE-pIR" firstAttribute="leading" secondItem="TbN-tr-ArJ" secondAttribute="leading" id="6h2-V1-26x"/>
+                                    <constraint firstItem="J7n-t2-x6m" firstAttribute="baseline" secondItem="TbN-tr-ArJ" secondAttribute="baseline" id="ATi-Uw-XvH"/>
+                                    <constraint firstAttribute="trailing" secondItem="A39-BU-dMr" secondAttribute="trailing" constant="23" id="OLh-9E-97Z"/>
+                                    <constraint firstItem="ePV-5v-ONC" firstAttribute="top" secondItem="AsI-OE-pIR" secondAttribute="bottom" constant="8" symbolic="YES" id="QHg-9O-h35"/>
+                                    <constraint firstItem="V9h-3j-ujg" firstAttribute="centerX" secondItem="TbN-tr-ArJ" secondAttribute="centerX" id="Rl1-g8-9Pj"/>
+                                    <constraint firstAttribute="trailing" secondItem="J7n-t2-x6m" secondAttribute="trailing" constant="23" id="ShE-gB-ROg"/>
+                                    <constraint firstItem="A39-BU-dMr" firstAttribute="top" secondItem="J7n-t2-x6m" secondAttribute="bottom" constant="8" symbolic="YES" id="bC9-Pw-yFK"/>
+                                    <constraint firstItem="AsI-OE-pIR" firstAttribute="leading" secondItem="ePV-5v-ONC" secondAttribute="leading" id="gf7-Wa-aOK"/>
+                                    <constraint firstItem="J7n-t2-x6m" firstAttribute="top" secondItem="fKZ-gv-gr1" secondAttribute="bottom" constant="8" symbolic="YES" id="hic-vX-RAN"/>
+                                    <constraint firstItem="qkH-6q-y7i" firstAttribute="baseline" secondItem="AsI-OE-pIR" secondAttribute="baseline" id="ibh-wa-A9c"/>
+                                    <constraint firstItem="fKZ-gv-gr1" firstAttribute="top" secondItem="qkH-6q-y7i" secondAttribute="bottom" constant="8" symbolic="YES" id="kk2-AV-ecY"/>
+                                    <constraint firstItem="V9h-3j-ujg" firstAttribute="baseline" secondItem="A39-BU-dMr" secondAttribute="baseline" id="lgQ-bc-qBJ"/>
+                                    <constraint firstItem="qkH-6q-y7i" firstAttribute="top" secondItem="UMV-Ct-5Xi" secondAttribute="top" constant="15" id="uQ1-xN-Vc5"/>
+                                    <constraint firstItem="AsI-OE-pIR" firstAttribute="leading" secondItem="V9h-3j-ujg" secondAttribute="leading" id="v2m-g7-5qo"/>
+                                    <constraint firstAttribute="trailing" secondItem="qkH-6q-y7i" secondAttribute="trailing" constant="23" id="wRu-Qd-pXu"/>
+                                </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="l5s-pt-N90">
                                 <rect key="frame" x="5" y="611" width="380" height="213"/>
@@ -111,8 +201,8 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="인천" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Coy-il-fTE">
-                                                    <rect key="frame" x="30" y="20" width="28.666666666666671" height="20"/>
-                                                    <fontDescription key="fontDescription" name="SuseongDotum-Regular" family="Suseong Dotum" pointSize="15"/>
+                                                    <rect key="frame" x="30" y="18.666666666666668" width="30.666666666666671" height="23.000000000000004"/>
+                                                    <fontDescription key="fontDescription" name="KOTRA_GOTHIC" family="KOTRA_GOTHIC" pointSize="18"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -148,17 +238,26 @@
                                 </prototypes>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="다른 지역 날씨 정보" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JW5-9R-GKc">
-                                <rect key="frame" x="30" y="569" width="345" height="27"/>
-                                <fontDescription key="fontDescription" name="SuseongDotum-Regular" family="Suseong Dotum" pointSize="20"/>
+                                <rect key="frame" x="30" y="570.33333333333337" width="345" height="25.666666666666629"/>
+                                <fontDescription key="fontDescription" name="KOTRA_GOTHIC" family="KOTRA_GOTHIC" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="내 위치 날씨 정보" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kme-SJ-HKi">
-                                <rect key="frame" x="30" y="73" width="345" height="27"/>
-                                <fontDescription key="fontDescription" name="SuseongDotum-Regular" family="Suseong Dotum" pointSize="20"/>
+                                <rect key="frame" x="30" y="73" width="345" height="25.666666666666671"/>
+                                <fontDescription key="fontDescription" name="KOTRA_GOTHIC" family="KOTRA_GOTHIC" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i6j-fk-6Th">
+                                <rect key="frame" x="296" y="34" width="89" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="자세히 보기"/>
+                                <connections>
+                                    <action selector="goDetail:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ka5-vL-G32"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -193,6 +292,195 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="16.923076923076923" y="128.67298578199052"/>
+        </scene>
+        <!--Detail WeatherVC-->
+        <scene sceneID="Ylp-Kg-zRT">
+            <objects>
+                <viewController storyboardIdentifier="DetailVC" id="Lcs-bj-Opo" customClass="DetailWeatherVC" customModule="LocationWeather" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3sc-bW-ytc">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="내 위치 날씨 정보" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H7D-N3-lGQ">
+                                <rect key="frame" x="23" y="72" width="138" height="26"/>
+                                <fontDescription key="fontDescription" name="KOTRA_GOTHIC" family="KOTRA_GOTHIC" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ihq-zB-smQ">
+                                <rect key="frame" x="16" y="124" width="358" height="139"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="발표일자 :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YDF-8K-D3s">
+                                        <rect key="frame" x="17" y="15" width="160" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="160" id="kGi-Oq-mBx"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="KOTRA_GOTHIC" family="KOTRA_GOTHIC" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="발표시각 :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kow-pV-2me">
+                                        <rect key="frame" x="17" y="43" width="160" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="160" id="1vD-u0-S46"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="KOTRA_GOTHIC" family="KOTRA_GOTHIC" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="예보지점 x 좌표 :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1cG-jc-ejo">
+                                        <rect key="frame" x="17" y="71" width="160" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="160" id="0ki-T2-Wva"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="KOTRA_GOTHIC" family="KOTRA_GOTHIC" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="예보지점 y 좌표 :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="esy-jN-qIV">
+                                        <rect key="frame" x="17" y="99" width="160" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="160" id="kkZ-ST-WgB"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="KOTRA_GOTHIC" family="KOTRA_GOTHIC" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="로딩중" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4WY-s9-xVz">
+                                        <rect key="frame" x="187" y="43" width="150" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="150" id="Py2-RT-bqC"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="KOTRA_GOTHIC" family="KOTRA_GOTHIC" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="로딩중" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IV3-ub-7xZ">
+                                        <rect key="frame" x="187" y="71" width="150" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="150" id="TYg-Uh-JaS"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="KOTRA_GOTHIC" family="KOTRA_GOTHIC" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="로딩중" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="poj-bk-dMb">
+                                        <rect key="frame" x="187" y="99" width="150" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="150" id="2dJ-p1-NRA"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="KOTRA_GOTHIC" family="KOTRA_GOTHIC" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="로딩중" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tD6-r5-UzM">
+                                        <rect key="frame" x="187" y="15" width="150" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="150" id="rpv-WN-noo"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="KOTRA_GOTHIC" family="KOTRA_GOTHIC" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="4WY-s9-xVz" firstAttribute="top" secondItem="ihq-zB-smQ" secondAttribute="top" constant="43" id="0Fa-fl-NK9"/>
+                                    <constraint firstAttribute="trailing" secondItem="4WY-s9-xVz" secondAttribute="trailing" constant="21" id="2DY-4i-9db"/>
+                                    <constraint firstItem="Kow-pV-2me" firstAttribute="leading" secondItem="1cG-jc-ejo" secondAttribute="leading" id="4gt-7i-6yZ"/>
+                                    <constraint firstItem="esy-jN-qIV" firstAttribute="leading" secondItem="ihq-zB-smQ" secondAttribute="leading" constant="17" id="5fx-2f-WNC"/>
+                                    <constraint firstItem="poj-bk-dMb" firstAttribute="top" secondItem="IV3-ub-7xZ" secondAttribute="bottom" constant="8" symbolic="YES" id="7eP-P3-hcF"/>
+                                    <constraint firstItem="Kow-pV-2me" firstAttribute="leading" secondItem="YDF-8K-D3s" secondAttribute="leading" id="Fjh-QW-EG5"/>
+                                    <constraint firstItem="4WY-s9-xVz" firstAttribute="top" secondItem="tD6-r5-UzM" secondAttribute="bottom" constant="8" symbolic="YES" id="Kwi-BC-uiV"/>
+                                    <constraint firstItem="YDF-8K-D3s" firstAttribute="baseline" secondItem="tD6-r5-UzM" secondAttribute="baseline" id="Nr4-Xt-R9P"/>
+                                    <constraint firstItem="Kow-pV-2me" firstAttribute="leading" secondItem="ihq-zB-smQ" secondAttribute="leading" constant="17" id="QYG-jo-xkx"/>
+                                    <constraint firstItem="YDF-8K-D3s" firstAttribute="leading" secondItem="ihq-zB-smQ" secondAttribute="leading" constant="17" id="Sec-Br-y7y"/>
+                                    <constraint firstAttribute="trailing" secondItem="poj-bk-dMb" secondAttribute="trailing" constant="21" id="Tf3-08-azS"/>
+                                    <constraint firstItem="Kow-pV-2me" firstAttribute="centerX" secondItem="YDF-8K-D3s" secondAttribute="centerX" id="Xko-31-Kh5"/>
+                                    <constraint firstItem="esy-jN-qIV" firstAttribute="top" secondItem="1cG-jc-ejo" secondAttribute="bottom" constant="8" symbolic="YES" id="Ywc-rb-xMX"/>
+                                    <constraint firstItem="Kow-pV-2me" firstAttribute="top" secondItem="YDF-8K-D3s" secondAttribute="bottom" constant="8" symbolic="YES" id="eV6-mr-Spq"/>
+                                    <constraint firstAttribute="trailing" secondItem="tD6-r5-UzM" secondAttribute="trailing" constant="21" id="kPs-5d-cLE"/>
+                                    <constraint firstItem="1cG-jc-ejo" firstAttribute="top" secondItem="Kow-pV-2me" secondAttribute="bottom" constant="8" symbolic="YES" id="qSx-Dc-OwL"/>
+                                    <constraint firstItem="Kow-pV-2me" firstAttribute="leading" secondItem="esy-jN-qIV" secondAttribute="leading" id="v15-aa-ncu"/>
+                                    <constraint firstItem="1cG-jc-ejo" firstAttribute="leading" secondItem="ihq-zB-smQ" secondAttribute="leading" constant="17" id="vKb-qR-bTR"/>
+                                    <constraint firstItem="IV3-ub-7xZ" firstAttribute="top" secondItem="4WY-s9-xVz" secondAttribute="bottom" constant="8" symbolic="YES" id="yc7-ak-3K7"/>
+                                    <constraint firstAttribute="trailing" secondItem="IV3-ub-7xZ" secondAttribute="trailing" constant="21" id="yl4-GU-nr7"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="1EI-7W-xn6">
+                                <rect key="frame" x="16" y="279" width="358" height="506"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="506" id="ygV-68-0Jt"/>
+                                </constraints>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="detailCell" rowHeight="60" id="fuh-9r-2pI" customClass="DetailWeatherTableViewCell" customModule="LocationWeather" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.666666030883789" width="358" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fuh-9r-2pI" id="vhx-Jp-p7Q">
+                                            <rect key="frame" x="0.0" y="0.0" width="358" height="60"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="카테고리" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I7I-jz-G9t">
+                                                    <rect key="frame" x="20" y="11" width="150" height="38"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="150" id="i2O-20-anc"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="KOTRA_GOTHIC" family="KOTRA_GOTHIC" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="정보" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ojw-mW-326">
+                                                    <rect key="frame" x="170" y="11" width="168" height="38"/>
+                                                    <fontDescription key="fontDescription" name="KOTRA_GOTHIC" family="KOTRA_GOTHIC" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="I7I-jz-G9t" firstAttribute="top" secondItem="vhx-Jp-p7Q" secondAttribute="topMargin" id="GxI-sb-fCG"/>
+                                                <constraint firstItem="Ojw-mW-326" firstAttribute="top" secondItem="vhx-Jp-p7Q" secondAttribute="topMargin" id="JwA-z8-5lp"/>
+                                                <constraint firstItem="Ojw-mW-326" firstAttribute="leading" secondItem="I7I-jz-G9t" secondAttribute="trailing" id="a06-a0-dpB"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Ojw-mW-326" secondAttribute="trailing" id="dKc-2N-fPQ"/>
+                                                <constraint firstItem="I7I-jz-G9t" firstAttribute="leading" secondItem="vhx-Jp-p7Q" secondAttribute="leadingMargin" id="lIi-hs-aur"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Ojw-mW-326" secondAttribute="bottom" id="u1f-cm-eYL"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="I7I-jz-G9t" secondAttribute="bottom" id="ykZ-3k-2o0"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="category" destination="I7I-jz-G9t" id="iib-8Y-ZFS"/>
+                                            <outlet property="dataInfo" destination="Ojw-mW-326" id="MuO-ZA-KX1"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Ekd-G9-5cQ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="H7D-N3-lGQ" firstAttribute="leading" secondItem="Ekd-G9-5cQ" secondAttribute="leading" constant="23" id="7mE-l5-cn6"/>
+                            <constraint firstItem="ihq-zB-smQ" firstAttribute="leading" secondItem="Ekd-G9-5cQ" secondAttribute="leading" constant="16" id="Fsl-h5-gyY"/>
+                            <constraint firstItem="ihq-zB-smQ" firstAttribute="top" secondItem="H7D-N3-lGQ" secondAttribute="bottom" constant="26" id="Kmf-PB-RLr"/>
+                            <constraint firstItem="1EI-7W-xn6" firstAttribute="top" secondItem="ihq-zB-smQ" secondAttribute="bottom" constant="16" id="LDK-3c-TZL"/>
+                            <constraint firstItem="Ekd-G9-5cQ" firstAttribute="trailing" secondItem="ihq-zB-smQ" secondAttribute="trailing" constant="16" id="OE3-h8-neP"/>
+                            <constraint firstItem="Ekd-G9-5cQ" firstAttribute="bottom" secondItem="1EI-7W-xn6" secondAttribute="bottom" constant="25" id="SnH-CM-7wp"/>
+                            <constraint firstItem="1EI-7W-xn6" firstAttribute="leading" secondItem="Ekd-G9-5cQ" secondAttribute="leading" constant="16" id="W0l-7M-G3G"/>
+                            <constraint firstItem="H7D-N3-lGQ" firstAttribute="top" secondItem="Ekd-G9-5cQ" secondAttribute="top" constant="28" id="ug8-vZ-ezd"/>
+                            <constraint firstItem="Ekd-G9-5cQ" firstAttribute="trailing" secondItem="1EI-7W-xn6" secondAttribute="trailing" constant="16" id="zAl-m5-aLY"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="HqT-zn-b1n"/>
+                    <connections>
+                        <outlet property="baseData" destination="tD6-r5-UzM" id="A4H-Om-xrX"/>
+                        <outlet property="baseTime" destination="4WY-s9-xVz" id="e7p-1c-uNU"/>
+                        <outlet property="detailTableView" destination="1EI-7W-xn6" id="RVJ-Yr-7lU"/>
+                        <outlet property="nx" destination="IV3-ub-7xZ" id="i63-Es-deG"/>
+                        <outlet property="ny" destination="poj-bk-dMb" id="dvy-8a-u0M"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jul-Uq-MiD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="684.61538461538464" y="128.67298578199052"/>
         </scene>
     </scenes>
     <resources>
