@@ -89,16 +89,7 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jKg-Hx-gnY">
                                 <rect key="frame" x="15" y="114" width="360" height="283"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="위치위치위치" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5L8-ZT-8H0">
-                                        <rect key="frame" x="14" y="51.999999999999972" width="92" height="23"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="KOTRA_GOTHIC" family="KOTRA_GOTHIC" pointSize="18"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" red="0.76003870959999997" green="0.67293762109999999" blue="0.87812966110000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UMV-Ct-5Xi">
                                 <rect key="frame" x="15" y="405" width="360" height="137.33333333333337"/>
@@ -283,6 +274,7 @@
                         <outlet property="announcementTime" destination="fKZ-gv-gr1" id="tT3-Ah-lRm"/>
                         <outlet property="forecastX" destination="J7n-t2-x6m" id="eRO-KS-aZi"/>
                         <outlet property="forecastY" destination="A39-BU-dMr" id="wYw-y7-KYL"/>
+                        <outlet property="nowPositionMapView" destination="jKg-Hx-gnY" id="W6L-As-MgT"/>
                         <outlet property="otherLocationTableView" destination="l5s-pt-N90" id="pbg-oI-qsp"/>
                     </connections>
                 </viewController>

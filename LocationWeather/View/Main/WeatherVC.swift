@@ -12,8 +12,9 @@ import Alamofire
 import RxAlamofire
 
 
-class WeatherVC: UIViewController {
+class WeatherVC: UIViewController, MTMapViewDelegate {
     
+    @IBOutlet var nowPositionMapView: UIView!
     @IBOutlet weak var announcementDay: UILabel!
     @IBOutlet weak var announcementTime: UILabel!
     @IBOutlet weak var forecastX: UILabel!
@@ -25,7 +26,7 @@ class WeatherVC: UIViewController {
     let otherLocationName: [LocationList] = [.incheon, .daejeon, .daegu, .busan, .ulsan]
     
     private var parameters: Parameters = [:]
-    
+    var mapView: MTMapView!
     override func viewDidLoad() {
         super.viewDidLoad()
         settingParameter()
@@ -33,6 +34,15 @@ class WeatherVC: UIViewController {
 
         otherLocationTableView.delegate = self
         otherLocationTableView.dataSource = self
+        
+        mapView = MTMapView(frame: self.nowPositionMapView.frame)
+        mapView?.delegate = self
+        mapView?.baseMapType = .standard
+        mapView.currentLocationTrackingMode = .onWithoutHeading
+        mapView.showCurrentLocationMarker = true
+        mapView.setMapCenter(MTMapPoint(geoCoord: MTMapPointGeo(latitude:  Double(WeatherViewModel.weatherViewModel.nowForecastX), longitude: Double(WeatherViewModel.weatherViewModel.nowForecastY))), zoomLevel: 5, animated: true)
+        self.view.addSubview(mapView)
+        
     }
     @IBAction func goDetail(_ sender: Any) {
         if let vc = self.storyboard?.instantiateViewController(withIdentifier: "DetailVC") as? DetailWeatherVC {
