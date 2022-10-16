@@ -40,6 +40,7 @@ extension DetailWeatherVC: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = detailTableView.dequeueReusableCell(withIdentifier: "detailCell", for: indexPath) as! DetailWeatherTableViewCell
+        
         let obsr = response?[indexPath.row].obsrValue ?? "정보없음"
         switch response?[indexPath.row].category {
             case "POP":

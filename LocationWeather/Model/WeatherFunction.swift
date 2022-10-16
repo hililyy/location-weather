@@ -9,5 +9,3 @@ import Foundation
 class WeatherFunction {
     
 }
-
-

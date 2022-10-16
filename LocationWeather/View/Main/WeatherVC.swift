@@ -23,18 +23,20 @@ class WeatherVC: UIViewController, MTMapViewDelegate {
     let disposeBag = DisposeBag()
     let model = WeatherViewModel.weatherViewModel
     
-    let otherLocationName: [LocationList] = [.incheon, .daejeon, .daegu, .busan, .ulsan]
-    
-    private var parameters: Parameters = [:]
+
+
     var mapView: MTMapView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        settingParameter()
+        model.settingParameter()
         requestWeatherData()
 
         otherLocationTableView.delegate = self
         otherLocationTableView.dataSource = self
         
+        loadKakaoMap()
+    }
+    func loadKakaoMap() {
         mapView = MTMapView(frame: self.nowPositionMapView.frame)
         mapView?.delegate = self
         mapView?.baseMapType = .standard
@@ -42,8 +44,8 @@ class WeatherVC: UIViewController, MTMapViewDelegate {
         mapView.showCurrentLocationMarker = true
         mapView.setMapCenter(MTMapPoint(geoCoord: MTMapPointGeo(latitude:  Double(WeatherViewModel.weatherViewModel.nowForecastX), longitude: Double(WeatherViewModel.weatherViewModel.nowForecastY))), zoomLevel: 5, animated: true)
         self.view.addSubview(mapView)
-        
     }
+    
     @IBAction func goDetail(_ sender: Any) {
         if let vc = self.storyboard?.instantiateViewController(withIdentifier: "DetailVC") as? DetailWeatherVC {
             vc.modalTransitionStyle = .coverVertical
@@ -52,20 +54,9 @@ class WeatherVC: UIViewController, MTMapViewDelegate {
             self.present(vc, animated: true, completion: nil)
         }
     }
-    func settingParameter() {
-        parameters = [
-            "serviceKey": "mJz7Lb%2B%2F20Uk8ve5Qx6GMo84GUbN1K%2BqFgbmdO17clsaiJaf3X6d%2FsNBJr5%2Bkvb6V5Wk5M7PqeXwzjMldfipjQ%3D%3D",
-            "numOfRows": 10,
-            "pageNo": 1,
-            "base_date": 20220807,
-            "base_time": 0600,
-            "nx": WeatherViewModel.weatherViewModel.nowForecastX,
-            "ny": WeatherViewModel.weatherViewModel.nowForecastY,
-            "dataType": "JSON"
-        ]
-    }
+
     func requestWeatherData() {
-        apiRequest().subscribe(
+        model.apiRequest().subscribe(
             onNext: { [weak self] response in
                 self?.model.weatherData = response
                 self?.announcementDay.text = response.response.body.items.item[0].baseDate
@@ -82,16 +73,7 @@ class WeatherVC: UIViewController, MTMapViewDelegate {
         ).disposed(by: disposeBag)
     }
     
-    func apiRequest() -> Observable<WeatherEntity> {
-        let urlString = "\(getUrl())"
-        return requestJSON(.get, urlString)
-                .map { $1 }
-                .map { response -> WeatherEntity in
-                    let data = try JSONSerialization.data(withJSONObject: response, options: .prettyPrinted)
-                    let productListData = try JSONDecoder().decode(WeatherEntity.self, from: data)
-                    return productListData.self
-                }
-    }
+
 }
 
 extension WeatherVC: UITableViewDelegate, UITableViewDataSource {
@@ -100,12 +82,12 @@ extension WeatherVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return otherLocationName.count
+        return model.otherLocationName.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = otherLocationTableView.dequeueReusableCell(withIdentifier: "OtherLocationCell", for: indexPath) as! OtherLocationTableViewCell
-        switch otherLocationName[indexPath.row] {
+        switch model.otherLocationName[indexPath.row] {
             case .incheon:
                 cell.locationName.text = "인천"
             case .daejeon:

@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2A0D877A28A13DEB00576E56 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 2A0D877928A13DEB00576E56 /* Lottie */; };
 		2A0D877E28A1522B00576E56 /* good.json in Resources */ = {isa = PBXBuildFile; fileRef = 2A0D877D28A1522B00576E56 /* good.json */; };
 		2A0D878028A1526A00576E56 /* weather.json in Resources */ = {isa = PBXBuildFile; fileRef = 2A0D877F28A1526A00576E56 /* weather.json */; };
 		2A0D878228A1561600576E56 /* SplashVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0D878128A1561600576E56 /* SplashVC.swift */; };
@@ -163,7 +162,6 @@
 				2A0D87E728A1B85C00576E56 /* CoreLocation.framework in Frameworks */,
 				2A0D87ED28A1B8A800576E56 /* libc++.tbd in Frameworks */,
 				2A0D87E528A1B84D00576E56 /* SystemConfiguration.framework in Frameworks */,
-				2A0D877A28A13DEB00576E56 /* Lottie in Frameworks */,
 				2A0D87EF28A1B8BD00576E56 /* libxml2.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -439,7 +437,6 @@
 			);
 			name = LocationWeather;
 			packageProductDependencies = (
-				2A0D877928A13DEB00576E56 /* Lottie */,
 			);
 			productName = LocationWeather;
 			productReference = 2AC6EB02289BB82F0062C8F0 /* LocationWeather.app */;
@@ -470,7 +467,6 @@
 			);
 			mainGroup = 2AC6EAF9289BB82F0062C8F0;
 			packageReferences = (
-				2A0D877828A13DEA00576E56 /* XCRemoteSwiftPackageReference "lottie-ios" */,
 				2A0D878F28A18A5B00576E56 /* XCRemoteSwiftPackageReference "CoreXLSX" */,
 			);
 			productRefGroup = 2AC6EB03289BB82F0062C8F0 /* Products */;
@@ -825,14 +821,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		2A0D877828A13DEA00576E56 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/airbnb/lottie-ios";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 3.0.0;
-			};
-		};
 		2A0D878F28A18A5B00576E56 /* XCRemoteSwiftPackageReference "CoreXLSX" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/CoreOffice/CoreXLSX.git";
@@ -842,14 +830,6 @@
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		2A0D877928A13DEB00576E56 /* Lottie */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 2A0D877828A13DEA00576E56 /* XCRemoteSwiftPackageReference "lottie-ios" */;
-			productName = Lottie;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2AC6EAFA289BB82F0062C8F0 /* Project object */;
 }

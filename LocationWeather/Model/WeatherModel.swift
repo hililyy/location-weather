@@ -10,5 +10,8 @@ import RxSwift
 
 class WeatherModel {
     static let weatherModel = WeatherModel()
-    
+    var repository = WeatherRepository()
+    func apiRequest() -> Observable<WeatherEntity> {
+        repository.apiRequest()
+    }
 }

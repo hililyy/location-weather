@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import CoreXLSX
 
 class OtherLocationVC: UIViewController, UITableViewDataSource {
     

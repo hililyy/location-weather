@@ -63,7 +63,7 @@ extension SplashVC: CLLocationManagerDelegate {
            case .authorizedAlways, .authorizedWhenInUse:
                print("GPS 권한 설정됨")
                showMainViewController()
-               self.locationManager.startUpdatingLocation() // 중요!
+               self.locationManager.startUpdatingLocation()
            case .restricted, .notDetermined:
                print("GPS 권한 설정되지 않음")
                getLocationUsagePermission()
@@ -81,8 +81,8 @@ extension SplashVC: CLLocationManagerDelegate {
             let longtitude: CLLocationDegrees = location.coordinate.longitude
             let latitude:CLLocationDegrees = location.coordinate.latitude
         
-        model.nowForecastX = Int(longtitude)
-        model.nowForecastY = Int(latitude)
+        model.nowForecastX = Int(latitude)
+        model.nowForecastY = Int(longtitude)
         
     }
     
